@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* Orage color: #e67e22 */
 
 /* ------------------------------------------------------ */
@@ -668,3 +669,631 @@ footer p {
   font-size: 70%;
   margin-top: 10px;
 }
+=======
+/* Orage color: #e67e22 */
+
+/* ------------------------------------------------------ */
+/* BASIC SETUP */
+/* ------------------------------------------------------ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: rgb(255, 255, 255);
+  color: rgb(82, 82, 82); /* all text color */
+  font-family: Ubuntu, Arial, Helvetica, sans-serif; /* fonts priority */
+  font-size: 20px; /* default fonts size */
+  font-weight: 300;
+  text-rendering: optimizeLegibility;
+}
+
+/* to have distance after using image and it gives the flow of normal content and does not break html */
+.cleafix {
+  zoom: 1;
+}
+.cleafix::after {
+  content: ".";
+  clear: both;
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+/* ------------------------------------------------------ */
+/* REUSEABLE COMPONENTS */
+/* ------------------------------------------------------ */
+
+.row {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+section {
+  padding: 80px 0;
+}
+
+.four-boxes {
+  padding: 2%;
+}
+
+/* ----- HEADINGS ----- */
+
+h1 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: white;
+  font-size: 220%;
+  font-weight: 300;
+  letter-spacing: 1px;
+  word-spacing: 4px;
+  text-transform: uppercase; /* All capital letter */
+}
+
+h2 {
+  font-size: 180%;
+  word-spacing: 2px;
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+h2::after {
+  /* for putting underline in words */
+  content: " ";
+  display: block;
+  width: 200px;
+  height: 2px;
+  margin: 0 auto;
+  margin-top: 20px;
+  background-color: #e67e22;
+}
+
+h3 {
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 110%;
+  margin-bottom: 16px;
+}
+/* ----- PARAGRAPHS ----- */
+
+.first-part {
+  line-height: 140%;
+  width: 70%;
+  margin-left: 15%;
+}
+
+.four-boxes p {
+  font-size: 85%;
+  line-height: 140%;
+}
+
+/* ----- Icons ----- */
+
+.big-icon {
+  display: block;
+  font-size: 300%;
+  color: #e67e22;
+  margin-bottom: 10px;
+}
+
+.icon-small {
+  /* to align text and icon */
+  display: inline-block;
+  width: 30px;
+  font-size: 120%;
+  text-align: center;
+  line-height: 120%;
+  vertical-align: middle;
+  margin-top: -2px;
+  margin-right: 5px;
+  color: #e67e22;
+}
+
+/* ----- LINKS ----- */
+
+.city-feature a:link,
+.city-feature a:visited {
+  color: #e67e22;
+  text-decoration: none;
+  padding-bottom: 2px;
+  border-bottom: 1px solid #e67e22;
+  transition: border-bottom 0.3s, color 0.3s;
+}
+
+.city-feature a:hover,
+.city-feature a:active {
+  color: rgb(82, 82, 82);
+  border-bottom: 1px solid transparent;
+}
+
+/* ----- BUTTONS ----- */
+
+.btn:link,
+.btn:visited,
+input[type="submit"] {
+  display: inline-block;
+  padding: 10px 30px;
+  font-weight: 300;
+  text-decoration: none;
+  border-radius: 200px;
+  transition: background-color 0.2s, border 0.2s, color 0.2s; /* transition effect */
+}
+
+.btn-full:link,
+.btn-full:visited,
+input[type="submit"] {
+  background-color: #e67e22;
+  border: 1px solid #e67e22;
+  color: white;
+  margin-right: 15px;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited {
+  border: 1px solid #e67e22;
+  color: #e67e22;
+}
+
+.btn:hover,
+.btn:active,
+input[type="submit"]:hover,
+input[type="submit"]:active {
+  background-color: #a86327;
+}
+
+.btn-full:hover,
+.btn-full:active {
+  border: 1px solid #a86327;
+}
+
+.btn-ghost:hover,
+.btn-ghost:active {
+  border: 1px solid #a86327;
+  color: white;
+}
+
+/* ------------------------------------------------------ */
+/* HEADER */
+/* ------------------------------------------------------ */
+
+header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url(img/hero.jpg); /* to make image dark-ish */
+  background-size: cover; /* to cover the image full screen to fit */
+  background-position: center;
+  height: 100vh; /* 100% view height of any screen */
+  background-attachment: fixed; /* to have fixed position of image when scrolling */
+}
+
+.hero-text-box {
+  position: absolute;
+  width: 1140px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.logo {
+  height: 100px;
+  width: auto;
+  float: left;
+  margin-top: 15px;
+}
+
+.main-nav {
+  float: right;
+  list-style: none;
+  margin-top: 50px;
+}
+
+.main-nav li {
+  display: inline-block; /* to put margin around inline element */
+  margin-left: 40px;
+}
+/* 
+.main-nav li a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 90%;
+} */
+.main-nav li a:link,
+.main-nav li a:visited {
+  padding: 8px 0;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 90%;
+  border-bottom: 2px solid transparent; /* to hide underline */
+  transition: border-bottom 0.2s;
+}
+.main-nav li a:hover,
+.main-nav li a:active {
+  border-bottom: 2px solid #e67e22;
+}
+
+/* ------------------------------------------------------ */
+/* MEALS */
+/* ------------------------------------------------------ */
+
+.section-features .first-part {
+  margin-bottom: 20px;
+}
+
+/* ------------------------------------------------------ */
+/* MEALS */
+/* ------------------------------------------------------ */
+
+.section-meal {
+  padding: 0;
+}
+
+.meals-pic {
+  list-style: none; /* to remove bullet pint from unordered list */
+  width: 100%;
+}
+
+.meals-pic li {
+  display: block; /* to make image block element */
+  float: left;
+  width: 25%;
+}
+
+.ten-food {
+  width: 100%;
+  margin: 0;
+  overflow: hidden; /* when making zoom trasition, this is for overlapping the images on each other */
+  background-color: black; /* to have a dark/gray image */
+}
+
+.ten-food img {
+  opacity: 0.65;
+  width: 100%;
+  height: auto;
+  transform: scale(1.15);
+  transition: transform 0.5s, opacity 0.5s; /* hover transition */
+}
+
+.nine {
+  /* for the 3rd row images */
+  display: block;
+  margin-left: 100%;
+  width: 100%;
+}
+
+.ten {
+  /* for the 3rd row images */
+  display: block;
+  margin-left: 100%;
+  width: 100%;
+}
+
+.ten-food img:hover {
+  transform: scale(1.035);
+  opacity: 1;
+}
+
+/* ------------------------------------------------------ */
+/* HOW IT WORKS */
+/* ------------------------------------------------------ */
+
+.section-steps {
+  background-color: rgba(247, 247, 223, 0.9);
+}
+
+.step-box:first-child {
+  text-align: right;
+  padding-right: 3%;
+}
+
+.step-box:last-child {
+  padding-left: 3%;
+  margin-top: 70px;
+}
+
+.app-screen {
+  width: 45%;
+}
+
+.works-step {
+  margin-bottom: 50px;
+}
+
+.works-step:last-of-type {
+  margin-bottom: 70px;
+}
+
+.works-step div {
+  color: #e67e22;
+  display: block;
+  border: 2px solid #e67e22;
+  border-radius: 50%;
+  height: 55px;
+  width: 55px;
+  text-align: center;
+  padding: 3px;
+  float: left;
+  font-size: 165%;
+  margin-right: 25px;
+}
+
+.works-step p {
+  padding-top: 5px;
+}
+
+.btn-app img {
+  height: 50px;
+  margin-right: 20px;
+}
+
+/* ------------------------------------------------------ */
+/* Areas/ Location */
+/* ------------------------------------------------------ */
+
+.four-boxes img {
+  width: 100%;
+  height: 150px;
+  margin-bottom: 15px;
+}
+
+.city-feature {
+  margin-bottom: 5px;
+}
+
+/* ------------------------------------------------------ */
+/* TESTIMONIALS */
+/* ------------------------------------------------------ */
+
+.section-testimonials {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url(img/back-customers.jpg);
+  background-size: cover; /* to fill whole width of the browser */
+  background-position: center; /* to center the image */
+  color: white; /* text color */
+  background-attachment: fixed; /* to have fixed position of image when scrolling */
+}
+
+blockquote {
+  padding: 2%;
+  font-style: italic;
+  line-height: 130%;
+  position: relative;
+  margin-top: 50px;
+}
+
+blockquote::before {
+  content: "\201C";
+  font-size: 300%;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+}
+
+cite {
+  font-size: 90%;
+  margin-top: 25px;
+  display: block;
+}
+
+cite img {
+  width: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+/* ------------------------------------------------------ */
+/* SIGN UP */
+/* ------------------------------------------------------ */
+
+.section-plans {
+  background-color: rgba(247, 247, 223, 0.9);
+}
+
+.plan-box {
+  background-color: white;
+  border-radius: 10px;
+  width: 90%;
+  margin-left: 5%;
+  box-shadow: 0 3px 6px rgb(99, 99, 99);
+}
+
+.plan-box div {
+  padding: 15px;
+  border-bottom: 1px solid rgba(216, 215, 212, 0.7);
+}
+
+.plan-box div:first-child {
+  background-color: rgb(233, 233, 233);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.plan-box div:last-child {
+  text-align: center;
+  border: 0;
+}
+
+.plan-price {
+  font-size: 220%;
+  margin-bottom: 10px;
+  font-weight: 300;
+  color: #e67e22;
+}
+
+.plan-price span {
+  font-size: 50%;
+  font-weight: 300;
+}
+
+.plan-price-meal {
+  font-size: 80%;
+}
+
+.plan-box ul {
+  list-style: none;
+}
+
+.plan-box li {
+  padding: 5px 0;
+}
+
+/* ------------------------------------------------------ */
+/* SIGN UP */
+/* ------------------------------------------------------ */
+
+.contact-form {
+  width: 60%;
+  margin: 0 auto;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  padding: 7px;
+  border-radius: 5px;
+  border: 1px solid rgb(209, 209, 209);
+}
+
+textarea {
+  height: 100px;
+}
+
+input[type="checkbox"] {
+  margin: 10px 10px 10px 0;
+}
+
+*:focus {
+  outline: none;
+}
+
+/* ------------------------------------------------------ */
+/* FOOTER */
+/* ------------------------------------------------------ */
+
+footer {
+  background-color: rgb(40, 40, 40);
+  padding: 15px;
+  font-size: 80%;
+}
+
+.footer-nav {
+  list-style: none;
+  float: left;
+}
+
+.social-links {
+  list-style: none;
+  float: right;
+}
+
+.footer-nav li,
+.social-links li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.footer-nav li:last-child,
+.social-links li:last-child {
+  margin-right: 0;
+}
+
+.footer-nav li a:link,
+.footer-nav li :visited,
+.social-links li a:link,
+.social-links li a:visited {
+  text-decoration: none;
+  border: 0;
+  color: rgb(80, 80, 80);
+  transition: color 0.2s;
+}
+
+.footer-nav li a:hover,
+.footer-nav li :active {
+  color: rgb(136, 136, 136);
+}
+
+.social-links li a:link,
+.social-links li a:visited {
+  font-size: 160%;
+}
+
+.ion-social-facebook:hover {
+  color: rgb(24, 119, 242);
+}
+
+.ion-social-twitter:hover {
+  color: rgb(29, 161, 242);
+}
+
+.ion-social-googleplus:hover {
+  color: rgb(219, 68, 55);
+}
+
+.ion-social-instagram:hover {
+  /* https://www.cssportal.com/css-text-gradient-generator/ */
+  background: #405de6;
+  background: -webkit-linear-gradient(
+    to top left,
+    #405de6 0%,
+    #5851db 11%,
+    #833ab4 22%,
+    #c13584 33%,
+    #e1306c 44%,
+    #fd1d1d 55%,
+    #f56040 66%,
+    #f77737 77%,
+    #fcaf45 88%,
+    #ffdc80 100%
+  );
+  background: -moz-linear-gradient(
+    to top left,
+    #405de6 0%,
+    #5851db 11%,
+    #833ab4 22%,
+    #c13584 33%,
+    #e1306c 44%,
+    #fd1d1d 55%,
+    #f56040 66%,
+    #f77737 77%,
+    #fcaf45 88%,
+    #ffdc80 100%
+  );
+  background: linear-gradient(
+    to top left,
+    #405de6 0%,
+    #5851db 11%,
+    #833ab4 22%,
+    #c13584 33%,
+    #e1306c 44%,
+    #fd1d1d 55%,
+    #f56040 66%,
+    #f77737 77%,
+    #fcaf45 88%,
+    #ffdc80 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.ion-social-facebook,
+.ion-social-twitter,
+.ion-social-googleplus,
+.ion-social-instagram {
+  transition: color 0.3s;
+}
+
+footer p {
+  color: rgb(80, 80, 80);
+  text-align: center;
+  font-size: 70%;
+  margin-top: 10px;
+}
+>>>>>>> 268323540dfb79f44c71527367c19b64e5e45a85
